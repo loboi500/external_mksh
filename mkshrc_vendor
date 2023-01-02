@@ -1,18 +1,3 @@
-# Copyright (c) 2010, 2012, 2013, 2014
-#	Thorsten Glaser <tg@mirbsd.org>
-# This file is provided under the same terms as mksh.
-#-
-# Minimal /system/etc/mkshrc for Android
-#
-# Support: https://launchpad.net/mksh
-
-set +o nohup
-
-if (( USER_ID )); then PS1='$'; else PS1='#'; fi
-PS4='[$EPOCHREALTIME] '; PS1='${|
-	local e=$?
-
-	(( e )) && REPLY+="$e|"
-
-	return $e
-}$HOSTNAME:${PWD:-?} '"$PS1 "
+version https://git-lfs.github.com/spec/v1
+oid sha256:57da624ec83cb61d9f81722ec72a6efa93f7ccbfbabc6e3aa3cf5348f80d8617
+size 389
